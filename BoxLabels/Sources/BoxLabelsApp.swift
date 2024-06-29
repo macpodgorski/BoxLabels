@@ -10,34 +10,34 @@ import ComposableArchitecture
 
 @main
 struct BoxLabelsApp: App {
-    static let store = Store(initialState: BoxesFeature.State()) {
-        BoxesFeature()
+    @MainActor
+    static let store = Store(initialState: AppFeature.State()) {
+        AppFeature()
             ._printChanges()
     }
 
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                TabView {
-                    BoxesView(store: BoxLabelsApp.store)
-                        .tabItem {
-                            Label("Home", systemImage: "shippingbox.fill")
+            if #available(iOS 16.0, *) {
+                NavigationStack {
+                    TabView {
+                        AppView(store: Self.store)
+                            .tabItem {
+                                Label("Home", systemImage: "shippingbox.fill")
+                            }
+                        ScanView()
+                            .tabItem {
+                                Label("Scan", systemImage: "qrcode")
+                            }
+                        SettingsView()
+                            .tabItem {
+                                Label("Settings", systemImage: "gearshape.fill")
+                            }
                     }
-                    ScanView()
-                        .tabItem {
-                            Label("Scan", systemImage: "qrcode")
-                        }
-
-                    SettingsView()
-                        .tabItem {
-                            Label("Settings", systemImage: "gearshape.fill")
-                        }
+                    .navigationTitle("BoxLabels")
                 }
-
-                Image("box-closed")
-                    .resizable()
-                    .scaledToFit()
-                    .opacity(0.03)
+            } else {
+                // Fallback on earlier versions
             }
         }
     }

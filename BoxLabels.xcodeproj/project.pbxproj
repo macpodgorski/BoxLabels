@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		ED0EB7302C29957900A48F26 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB72F2C29957900A48F26 /* SettingsView.swift */; };
-		ED0EB7322C29963D00A48F26 /* BoxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB7312C29963D00A48F26 /* BoxesView.swift */; };
-		ED0EB7342C29A1B700A48F26 /* AddBoxFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB7332C29A1B700A48F26 /* AddBoxFeature.swift */; };
-		ED0EB7362C2A92BF00A48F26 /* AddBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB7352C2A92BF00A48F26 /* AddBoxView.swift */; };
+		ED0EB7322C29963D00A48F26 /* BoxesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB7312C29963D00A48F26 /* BoxesListView.swift */; };
 		ED0EB7382C2A95EB00A48F26 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB7372C2A95EB00A48F26 /* ScanView.swift */; };
 		ED0EB73A2C2AA17900A48F26 /* QRCodeGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB7392C2AA17900A48F26 /* QRCodeGen.swift */; };
-		ED0EB73C2C2AA22100A48F26 /* BoxesFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB73B2C2AA22100A48F26 /* BoxesFeature.swift */; };
+		ED0EB73C2C2AA22100A48F26 /* BoxesListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB73B2C2AA22100A48F26 /* BoxesListFeature.swift */; };
 		ED0EB73E2C2C5C0A00A48F26 /* BoxDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB73D2C2C5C0900A48F26 /* BoxDetailFeature.swift */; };
 		ED0EB7402C2C5C7800A48F26 /* BoxDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB73F2C2C5C7800A48F26 /* BoxDetailView.swift */; };
+		ED3A619E2C2EC855008A818F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A619D2C2EC855008A818F /* CardView.swift */; };
+		ED3A61A02C2EF71D008A818F /* BoxFormFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A619F2C2EF71D008A818F /* BoxFormFeature.swift */; };
+		ED3A61A32C2EF9B5008A818F /* BoxFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A61A22C2EF9B5008A818F /* BoxFormView.swift */; };
+		ED3A61A72C2F0BFB008A818F /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A61A62C2F0BFB008A818F /* BoxView.swift */; };
 		ED6F7BA32BE644C300928A6D /* BoxLabelsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F7BA22BE644C300928A6D /* BoxLabelsApp.swift */; };
 		ED6F7BA72BE644C700928A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6F7BA62BE644C700928A6D /* Assets.xcassets */; };
 		ED6F7BAA2BE644C700928A6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6F7BA92BE644C700928A6D /* Preview Assets.xcassets */; };
@@ -25,18 +27,24 @@
 		ED6F7BC02BE651A000928A6D /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED6F7BBF2BE651A000928A6D /* FirebaseAnalyticsSwift */; };
 		ED6F7BC42BE667BB00928A6D /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F7BC32BE667BB00928A6D /* Box.swift */; };
 		ED7BDDED2C2D940B00DECC03 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ED7BDDEC2C2D940B00DECC03 /* .swiftlint.yml */; };
+		ED7BDDF92C2DC14E00DECC03 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BDDF82C2DC14D00DECC03 /* Item.swift */; };
+		ED9E8AE12C2F60EB0065EDFE /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E8AE02C2F60EB0065EDFE /* AppView.swift */; };
+		ED9E8AE32C2F60F50065EDFE /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E8AE22C2F60F50065EDFE /* AppFeature.swift */; };
+		EDCE736E2C303B9200EEF3E5 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = EDCE736D2C303B9200EEF3E5 /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ED0EB72F2C29957900A48F26 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		ED0EB7312C29963D00A48F26 /* BoxesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxesView.swift; sourceTree = "<group>"; };
-		ED0EB7332C29A1B700A48F26 /* AddBoxFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBoxFeature.swift; sourceTree = "<group>"; };
-		ED0EB7352C2A92BF00A48F26 /* AddBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBoxView.swift; sourceTree = "<group>"; };
+		ED0EB7312C29963D00A48F26 /* BoxesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxesListView.swift; sourceTree = "<group>"; };
 		ED0EB7372C2A95EB00A48F26 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		ED0EB7392C2AA17900A48F26 /* QRCodeGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGen.swift; sourceTree = "<group>"; };
-		ED0EB73B2C2AA22100A48F26 /* BoxesFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxesFeature.swift; sourceTree = "<group>"; };
+		ED0EB73B2C2AA22100A48F26 /* BoxesListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxesListFeature.swift; sourceTree = "<group>"; };
 		ED0EB73D2C2C5C0900A48F26 /* BoxDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDetailFeature.swift; sourceTree = "<group>"; };
 		ED0EB73F2C2C5C7800A48F26 /* BoxDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDetailView.swift; sourceTree = "<group>"; };
+		ED3A619D2C2EC855008A818F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		ED3A619F2C2EF71D008A818F /* BoxFormFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxFormFeature.swift; sourceTree = "<group>"; };
+		ED3A61A22C2EF9B5008A818F /* BoxFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxFormView.swift; sourceTree = "<group>"; };
+		ED3A61A62C2F0BFB008A818F /* BoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
 		ED6F7B9F2BE644C300928A6D /* BoxLabels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoxLabels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6F7BA22BE644C300928A6D /* BoxLabelsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxLabelsApp.swift; sourceTree = "<group>"; };
 		ED6F7BA62BE644C700928A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +52,9 @@
 		ED6F7BB32BE6485B00928A6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED6F7BC32BE667BB00928A6D /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		ED7BDDEC2C2D940B00DECC03 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		ED7BDDF82C2DC14D00DECC03 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		ED9E8AE02C2F60EB0065EDFE /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		ED9E8AE22C2F60F50065EDFE /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCE736E2C303B9200EEF3E5 /* CodeScanner in Frameworks */,
 				ED6F7BC02BE651A000928A6D /* FirebaseAnalyticsSwift in Frameworks */,
 				ED6F7BBE2BE6519D00928A6D /* FirebaseAnalytics in Frameworks */,
 				ED6F7BBC2BE6519900928A6D /* ComposableArchitecture in Frameworks */,
@@ -60,6 +72,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED3A619C2C2EC84A008A818F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED3A619D2C2EC855008A818F /* CardView.swift */,
+				ED3A61A62C2F0BFB008A818F /* BoxView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED3A61A12C2EF9A3008A818F /* BoxForm */ = {
+			isa = PBXGroup;
+			children = (
+				ED3A619F2C2EF71D008A818F /* BoxFormFeature.swift */,
+				ED3A61A22C2EF9B5008A818F /* BoxFormView.swift */,
+			);
+			path = BoxForm;
+			sourceTree = "<group>";
+		};
 		ED6F7B962BE644C300928A6D = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				ED6F7BC32BE667BB00928A6D /* Box.swift */,
+				ED7BDDF82C2DC14D00DECC03 /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +150,7 @@
 				ED7BDDE42C2D858D00DECC03 /* Composables */,
 				ED7BDDE52C2D859400DECC03 /* Globals */,
 				ED6F7BC12BE6660800928A6D /* Models */,
+				ED3A619C2C2EC84A008A818F /* Views */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -126,11 +158,12 @@
 		ED7BDDE42C2D858D00DECC03 /* Composables */ = {
 			isa = PBXGroup;
 			children = (
+				ED9E8ADF2C2F60DC0065EDFE /* App */,
+				ED3A61A12C2EF9A3008A818F /* BoxForm */,
+				ED7BDDE72C2D85E000DECC03 /* BoxesList */,
 				ED7BDDEA2C2D869000DECC03 /* BoxDetail */,
 				ED7BDDE92C2D868900DECC03 /* Scan */,
 				ED7BDDE82C2D867E00DECC03 /* Settings */,
-				ED7BDDE72C2D85E000DECC03 /* Boxes */,
-				ED7BDDE62C2D85CF00DECC03 /* AddBox */,
 			);
 			path = Composables;
 			sourceTree = "<group>";
@@ -143,22 +176,13 @@
 			path = Globals;
 			sourceTree = "<group>";
 		};
-		ED7BDDE62C2D85CF00DECC03 /* AddBox */ = {
+		ED7BDDE72C2D85E000DECC03 /* BoxesList */ = {
 			isa = PBXGroup;
 			children = (
-				ED0EB7332C29A1B700A48F26 /* AddBoxFeature.swift */,
-				ED0EB7352C2A92BF00A48F26 /* AddBoxView.swift */,
+				ED0EB7312C29963D00A48F26 /* BoxesListView.swift */,
+				ED0EB73B2C2AA22100A48F26 /* BoxesListFeature.swift */,
 			);
-			path = AddBox;
-			sourceTree = "<group>";
-		};
-		ED7BDDE72C2D85E000DECC03 /* Boxes */ = {
-			isa = PBXGroup;
-			children = (
-				ED0EB7312C29963D00A48F26 /* BoxesView.swift */,
-				ED0EB73B2C2AA22100A48F26 /* BoxesFeature.swift */,
-			);
-			path = Boxes;
+			path = BoxesList;
 			sourceTree = "<group>";
 		};
 		ED7BDDE82C2D867E00DECC03 /* Settings */ = {
@@ -186,6 +210,15 @@
 			path = BoxDetail;
 			sourceTree = "<group>";
 		};
+		ED9E8ADF2C2F60DC0065EDFE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ED9E8AE02C2F60EB0065EDFE /* AppView.swift */,
+				ED9E8AE22C2F60F50065EDFE /* AppFeature.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,6 +240,7 @@
 				ED6F7BBB2BE6519900928A6D /* ComposableArchitecture */,
 				ED6F7BBD2BE6519D00928A6D /* FirebaseAnalytics */,
 				ED6F7BBF2BE651A000928A6D /* FirebaseAnalyticsSwift */,
+				EDCE736D2C303B9200EEF3E5 /* CodeScanner */,
 			);
 			productName = BoxLabels;
 			productReference = ED6F7B9F2BE644C300928A6D /* BoxLabels.app */;
@@ -239,6 +273,7 @@
 			packageReferences = (
 				ED6F7BB02BE6450100928A6D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				ED6F7BB52BE6496C00928A6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EDCE736C2C303B9200EEF3E5 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = ED6F7BA02BE644C300928A6D /* Products */;
 			projectDirPath = "";
@@ -289,16 +324,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED0EB7362C2A92BF00A48F26 /* AddBoxView.swift in Sources */,
 				ED0EB7302C29957900A48F26 /* SettingsView.swift in Sources */,
-				ED0EB7342C29A1B700A48F26 /* AddBoxFeature.swift in Sources */,
+				ED3A61A02C2EF71D008A818F /* BoxFormFeature.swift in Sources */,
+				ED7BDDF92C2DC14E00DECC03 /* Item.swift in Sources */,
+				ED3A61A32C2EF9B5008A818F /* BoxFormView.swift in Sources */,
 				ED0EB7402C2C5C7800A48F26 /* BoxDetailView.swift in Sources */,
 				ED6F7BC42BE667BB00928A6D /* Box.swift in Sources */,
 				ED0EB73E2C2C5C0A00A48F26 /* BoxDetailFeature.swift in Sources */,
+				ED3A61A72C2F0BFB008A818F /* BoxView.swift in Sources */,
+				ED9E8AE32C2F60F50065EDFE /* AppFeature.swift in Sources */,
+				ED9E8AE12C2F60EB0065EDFE /* AppView.swift in Sources */,
 				ED0EB7382C2A95EB00A48F26 /* ScanView.swift in Sources */,
-				ED0EB73C2C2AA22100A48F26 /* BoxesFeature.swift in Sources */,
+				ED0EB73C2C2AA22100A48F26 /* BoxesListFeature.swift in Sources */,
 				ED0EB73A2C2AA17900A48F26 /* QRCodeGen.swift in Sources */,
-				ED0EB7322C29963D00A48F26 /* BoxesView.swift in Sources */,
+				ED0EB7322C29963D00A48F26 /* BoxesListView.swift in Sources */,
+				ED3A619E2C2EC855008A818F /* CardView.swift in Sources */,
 				ED6F7BA32BE644C300928A6D /* BoxLabelsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +477,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Needed to scan QR Code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,6 +509,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Needed to scan QR Code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -527,6 +569,14 @@
 				minimumVersion = 10.25.0;
 			};
 		};
+		EDCE736C2C303B9200EEF3E5 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -544,6 +594,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ED6F7BB52BE6496C00928A6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsSwift;
+		};
+		EDCE736D2C303B9200EEF3E5 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDCE736C2C303B9200EEF3E5 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

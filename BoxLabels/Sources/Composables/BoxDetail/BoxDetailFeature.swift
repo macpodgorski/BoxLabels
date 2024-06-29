@@ -10,56 +10,77 @@ import ComposableArchitecture
 
 @Reducer
 struct BoxDetailFeature {
+    @Reducer(state: .equatable)
+    enum Destination {
+        case alert(AlertState<Alert>)
+        case edit(BoxFormFeature)
+        @CasePathable
+        enum Alert {
+            case confirmButtonTapped
+        }
+    }
+
     @ObservableState
     struct State: Equatable {
-        @Presents var alert: AlertState<Action.Alert>?
-        let box: Box
+        @Presents var destination: Destination.State?
+        @Shared var box: Box
     }
 
     enum Action {
-        case alert(PresentationAction<Alert>)
-        case delegate(Delegate)
         case deleteButtonTapped
-        enum Alert {
-            case confirmDeletion
-        }
-        enum Delegate {
-            case confirmDeletion
-        }
+        case editButtonTapped
+        case destination(PresentationAction<Destination.Action>)
+        case cancelEditButtonTapped
+        case saveEditButtonTapped
     }
-    @Dependency(\.dismiss) var dismiss
 
+    @Dependency(\.dismiss) var dismiss
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
+            case .destination(.presented(.alert(.confirmButtonTapped))):
+                @Shared(.boxes) var boxes: IdentifiedArrayOf<Box> = []
+                boxes.remove(id: state.box.id)
+                return .run { _ in await dismiss() }
 
-            case .alert(.presented(.confirmDeletion)):
-                return .run { send in
-                    await send(.delegate(.confirmDeletion))
-                    await self.dismiss()
-                }
-
-            case .alert:
-                return .none
-
-            case .delegate:
+            case .destination:
                 return .none
 
             case .deleteButtonTapped:
-                state.alert = .confirmDeletion
+                state.destination = .alert(.deleteBox)
+                return .none
+
+            case .editButtonTapped:
+                state.destination = .edit(BoxFormFeature.State(box: state.box))
+                return .none
+
+            case .cancelEditButtonTapped:
+                state.destination = nil
+                return .none
+
+            case .saveEditButtonTapped:
+                guard let editedBox = state.destination?.edit?.box
+                else { return .none }
+                state.box = editedBox
+                state.destination = nil
                 return .none
             }
         }
-        .ifLet(\.$alert, action: \.alert)
+        .ifLet(\.$destination, action: \.destination)
     }
 }
 
-extension AlertState where Action == BoxDetailFeature.Action.Alert {
-    static let confirmDeletion = Self {
-        TextState("Are you sure")
+extension AlertState where Action == BoxDetailFeature.Destination.Alert {
+    static let deleteBox = Self {
+        TextState("Delete?")
     } actions: {
-        ButtonState(role: .destructive, action: .confirmDeletion) {
-            TextState("Delete")
+        ButtonState(role: .destructive, action: .confirmButtonTapped) {
+            TextState("Yes")
         }
+        ButtonState(role: .cancel) {
+            TextState("Cancel")
+        }
+    } message: {
+        TextState("Are you sure you want to delete this box?")
     }
 }
