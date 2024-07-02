@@ -1,5 +1,5 @@
 //
-//  BoxForm.swift
+//  BoxFormFeature.swift
 //  BoxLabels
 //
 //  Created by Maciej Podgórski on 28/06/2024.

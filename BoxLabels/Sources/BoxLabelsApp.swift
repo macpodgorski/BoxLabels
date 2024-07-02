@@ -18,27 +18,7 @@ struct BoxLabelsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if #available(iOS 16.0, *) {
-                NavigationStack {
-                    TabView {
-                        AppView(store: Self.store)
-                            .tabItem {
-                                Label("Home", systemImage: "shippingbox.fill")
-                            }
-                        ScanView()
-                            .tabItem {
-                                Label("Scan", systemImage: "qrcode")
-                            }
-                        SettingsView()
-                            .tabItem {
-                                Label("Settings", systemImage: "gearshape.fill")
-                            }
-                    }
-                    .navigationTitle("BoxLabels")
-                }
-            } else {
-                // Fallback on earlier versions
-            }
+            AppView(store: Self.store)
         }
     }
 }

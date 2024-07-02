@@ -40,18 +40,16 @@ struct BoxDetailView: View {
             } header: {
                 Text("Items")
             }
-
-            Section {
-                Button("Delete") {
-                    store.send(.deleteButtonTapped)
-                }
-                .foregroundColor(.red)
-                .frame(maxWidth: .infinity)
-            }
         }
         .navigationTitle(Text(store.box.title))
         .alert($store.scope(state: \.destination?.alert, action: \.destination.alert))
         .toolbar {
+            Button {
+                store.send(.deleteButtonTapped)
+            } label: {
+                Image(systemName: "trash")
+                    .foregroundStyle(.red)
+            }
             Button("Edit") {
                 store.send(.editButtonTapped)
             }

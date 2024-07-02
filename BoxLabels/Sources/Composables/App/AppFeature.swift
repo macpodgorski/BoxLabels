@@ -2,7 +2,7 @@
 //  AppFeature.swift
 //  BoxLabels
 //
-//  Created by Maciej Podgórski on 28/06/2024.
+//  Created by Maciej Podgórski on 02/07/2024.
 //
 
 import Foundation
@@ -10,31 +10,38 @@ import ComposableArchitecture
 
 @Reducer
 struct AppFeature {
-    @Reducer(state: .equatable)
-    enum Path {
-        case detail(BoxDetailFeature)
+    enum Tab {
+        case home, scan, settings
     }
     @ObservableState
     struct State: Equatable {
-        var path = StackState<Path.State>()
-        var boxesList = BoxesListFeature.State()
+        var currentTab = Tab.home
+        var home = HomeTabFeature.State()
+        var scan = ScanTabFeature.State()
     }
+
     enum Action {
-        case path(StackActionOf<Path>)
-        case boxesList(BoxesListFeature.Action)
+        case home(HomeTabFeature.Action)
+        case scan(ScanTabFeature.Action)
+        case selectTab(Tab)
     }
+
     var body: some ReducerOf<Self> {
-        Scope(state: \.boxesList, action: \.boxesList) {
-            BoxesListFeature()
+        Scope(state: \.home, action: \.home) {
+            HomeTabFeature()
         }
+        Scope(state: \.scan, action: \.scan) {
+            ScanTabFeature()
+        }
+
         Reduce { state, action in
             switch action {
-            case .path:
+            case .home, .scan:
                 return .none
-            case .boxesList:
+            case let .selectTab(tab):
+                state.currentTab = tab
                 return .none
             }
         }
-        .forEach(\.path, action: \.path)
     }
 }

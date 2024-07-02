@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  BoxesListView.swift
 //  BoxLabels
 //
 //  Created by Maciej Podgórski on 24/06/2024.
@@ -14,7 +14,7 @@ struct BoxesListView: View {
     var body: some View {
         List {
             ForEach(store.$boxes.elements) { $box in
-                NavigationLink(state: AppFeature.Path.State.detail(BoxDetailFeature.State(box: $box))) {
+                NavigationLink(state: AppFeature.HomeTabFeature.Path.State.detail(BoxDetailFeature.State(box: $box))) {
                     CardView(box: box)
                 }
                 .listRowBackground(Color.brown)

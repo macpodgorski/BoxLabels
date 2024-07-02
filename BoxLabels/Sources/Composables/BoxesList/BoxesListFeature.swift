@@ -1,5 +1,5 @@
 //
-//  BoxFeature.swift
+//  BoxesListFeature.swift
 //  BoxLabels
 //
 //  Created by Maciej Podgórski on 25/06/2024.
@@ -28,10 +28,12 @@ struct BoxesListFeature {
             switch action {
             case .addBoxButtonTapped:
                 let id = Box.ID()
-                state.addBox = BoxFormFeature.State(box: Box(id: id,
-                                                             qrCode: generateQRCode(from: id.uuidString),
-                                                             room: "Living Room",
-                                                             size: "Small"))
+                state.addBox = BoxFormFeature.State(
+                    box: Box(id: id,
+                            qrCode: generateQRCode(from: id.uuidString),
+                            room: "Living Room",
+                            size: "Small")
+                )
                 // TODO: make qrcode from id and username in future
                 return .none
 
@@ -46,8 +48,8 @@ struct BoxesListFeature {
                 return .none
 
             case .cancelButtonTapped:
-                    state.addBox = nil
-                    return .none
+                state.addBox = nil
+                return .none
 
             case let .onDelete(indexSet):
                 state.boxes.remove(atOffsets: indexSet)
