@@ -11,6 +11,7 @@ import ComposableArchitecture
 struct BoxFormView: View {
     @Perception.Bindable var store: StoreOf<BoxFormFeature>
     @FocusState var focus: BoxFormFeature.State.Field?
+
     let sizes = ["Small", "Medium", "Large"]
     let rooms = ["Living Room", "Bedroom", "Hallway", "Garage", "Attic", "Kitchen", "Bathroom", "Other"]
 

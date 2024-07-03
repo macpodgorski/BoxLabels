@@ -15,10 +15,18 @@ struct BoxDetailView: View {
         Form {
             Section {
                 Image(uiImage: UIImage(data: store.box.qrCode)!)
-                    .interpolation(.none)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
+                    .contextMenu {
+                        ShareLink(
+                            item: Image(uiImage: UIImage(data: store.box.qrCode)!),
+                            preview: SharePreview(
+                                "\(store.box.title) QR Code",
+                                image: Image(uiImage: UIImage(data: store.box.qrCode)!)
+                            )
+                        )
+                    }
                 HStack {
                     Label("Room", systemImage: "text.alignleft")
                     Spacer()
@@ -73,6 +81,7 @@ struct BoxDetailView: View {
             }
         }
     }
+
 }
 
 #Preview {

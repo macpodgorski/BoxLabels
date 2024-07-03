@@ -30,7 +30,7 @@ struct BoxesListFeature {
                 let id = Box.ID()
                 state.addBox = BoxFormFeature.State(
                     box: Box(id: id,
-                            qrCode: generateQRCode(from: id.uuidString),
+                            qrCode: generateQRCode(from: id.uuidString)!,
                             room: "Living Room",
                             size: "Small")
                 )
@@ -65,12 +65,3 @@ struct BoxesListFeature {
     }
 }
 
-extension PersistenceReaderKey
-where Self == PersistenceKeyDefault<FileStorageKey<IdentifiedArrayOf<Box>>> {
-  static var boxes: Self {
-    PersistenceKeyDefault(
-      .fileStorage(.documentsDirectory.appending(component: "boxes.json")),
-      []
-    )
-  }
-}

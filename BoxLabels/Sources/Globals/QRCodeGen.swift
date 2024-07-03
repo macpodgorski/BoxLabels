@@ -9,17 +9,18 @@ import Foundation
 import UIKit
 import CoreImage.CIFilterBuiltins
 
-func generateQRCode(from string: String) -> UIImage {
-    let context = CIContext()
+func generateQRCode(from string: String) -> Data? {
     let filter = CIFilter.qrCodeGenerator()
 
-    filter.message = Data(string.utf8)
+    guard let data = string.data(using: .ascii, allowLossyConversion: false)
+    else { return nil }
+    filter.message = data
 
-    if let outputImage = filter.outputImage {
-        if let cgImage = context.createCGImage(outputImage, from: outputImage.extent) {
-            return UIImage(cgImage: cgImage)
-        }
-    }
+    guard let ciImage = filter.outputImage else { return nil }
+    let transform = CGAffineTransform(scaleX: 10, y: 10)
+    let scaledImage = ciImage.transformed(by: transform)
+    let uiImage = UIImage(ciImage: scaledImage)
 
-    return UIImage(systemName: "xmark.circle") ?? UIImage()
+    return uiImage.pngData()
+
 }

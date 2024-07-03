@@ -35,5 +35,5 @@ struct BoxView: View {
 }
 
 #Preview {
-    BoxView(box: Box(id: UUID(), title: "bofsdasdffsdx 1", qrCode: generateQRCode(from: "text")))
+    BoxView(box: Box(id: UUID(), title: "bofsdasdffsdx 1", qrCode: generateQRCode(from: "text")!))
 }

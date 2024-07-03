@@ -29,5 +29,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(box: Box(id: UUID(), title: "bofsdasdffsdx 1", qrCode: generateQRCode(from: "text")))
+    CardView(box: Box(id: UUID(), title: "bofsdasdffsdx 1", qrCode: generateQRCode(from: "text")!))
 }

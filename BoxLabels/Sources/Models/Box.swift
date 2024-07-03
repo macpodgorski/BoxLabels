@@ -18,15 +18,15 @@ struct Box: Identifiable, Equatable, Codable {
     var room = "Bedroom"
     var size = "Medium"
 
-    init(id: UUID, title: String = "", boxItems: IdentifiedArrayOf<Item> = [],
-         qrCode: UIImage, room: String = "", size: String = "") {
-        self.id = id
-        self.title = title
-        self.boxItems = boxItems
-        self.qrCode = qrCode.pngData()!
-        self.room = room
-        self.size = size
-    }
+//    init(id: UUID, title: String = "", boxItems: IdentifiedArrayOf<Item> = [],
+//         qrCode: UIImage, room: String = "", size: String = "") {
+//        self.id = id
+//        self.title = title
+//        self.boxItems = boxItems
+//        self.qrCode = qrCode.pngData()!
+//        self.room = room
+//        self.size = size
+//    }
 }
 
 extension Box {
@@ -37,7 +37,7 @@ extension Box {
       Item(id: Item.ID(), title: "item1"),
       Item(id: Item.ID(), title: "item2"),
       Item(id: Item.ID(), title: "item3")],
-    qrCode: generateQRCode(from: "blank qr"),
+    qrCode: generateQRCode(from: "blank qr")!,
     room: "Bedroom",
     size: "Medium"
   )
