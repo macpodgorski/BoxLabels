@@ -59,11 +59,13 @@ struct BoxDetailFeature {
                 return .none
 
             case .saveEditButtonTapped:
-                guard let editedBox = state.destination?.edit?.box
-                else { return .none }
-                print("Edited box: \(editedBox.title), \(editedBox.size)")
+                @Shared(.boxes) var boxes: IdentifiedArrayOf<Box> = []
+                guard let editedBox = state.destination?.edit?.box else {
+                    return .none
+                }
                 state.box = editedBox
-                print("Edited box: \(state.box.title), \(state.box.size)")
+                boxes.updateOrAppend(editedBox)
+
                 state.destination = nil
                 return .none
             }
