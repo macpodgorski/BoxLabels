@@ -22,8 +22,6 @@
 		ED6F7BA72BE644C700928A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6F7BA62BE644C700928A6D /* Assets.xcassets */; };
 		ED6F7BAA2BE644C700928A6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6F7BA92BE644C700928A6D /* Preview Assets.xcassets */; };
 		ED6F7BBC2BE6519900928A6D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = ED6F7BBB2BE6519900928A6D /* ComposableArchitecture */; };
-		ED6F7BBE2BE6519D00928A6D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ED6F7BBD2BE6519D00928A6D /* FirebaseAnalytics */; };
-		ED6F7BC02BE651A000928A6D /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED6F7BBF2BE651A000928A6D /* FirebaseAnalyticsSwift */; };
 		ED6F7BC42BE667BB00928A6D /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F7BC32BE667BB00928A6D /* Box.swift */; };
 		ED7BDDF92C2DC14E00DECC03 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BDDF82C2DC14D00DECC03 /* Item.swift */; };
 		ED9E8AE12C2F60EB0065EDFE /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E8AE02C2F60EB0065EDFE /* HomeTabView.swift */; };
@@ -65,8 +63,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCE736E2C303B9200EEF3E5 /* CodeScanner in Frameworks */,
-				ED6F7BC02BE651A000928A6D /* FirebaseAnalyticsSwift in Frameworks */,
-				ED6F7BBE2BE6519D00928A6D /* FirebaseAnalytics in Frameworks */,
 				ED6F7BBC2BE6519900928A6D /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,8 +82,8 @@
 		ED3A61A12C2EF9A3008A818F /* BoxForm */ = {
 			isa = PBXGroup;
 			children = (
-				ED3A619F2C2EF71D008A818F /* BoxFormFeature.swift */,
 				ED3A61A22C2EF9B5008A818F /* BoxFormView.swift */,
+				ED3A619F2C2EF71D008A818F /* BoxFormFeature.swift */,
 			);
 			path = BoxForm;
 			sourceTree = "<group>";
@@ -224,8 +220,8 @@
 		EDED65542C34958E00DCE761 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				EDED65552C34959C00DCE761 /* AppFeature.swift */,
 				EDED65572C3495A800DCE761 /* AppView.swift */,
+				EDED65552C34959C00DCE761 /* AppFeature.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -249,8 +245,6 @@
 			name = BoxLabels;
 			packageProductDependencies = (
 				ED6F7BBB2BE6519900928A6D /* ComposableArchitecture */,
-				ED6F7BBD2BE6519D00928A6D /* FirebaseAnalytics */,
-				ED6F7BBF2BE651A000928A6D /* FirebaseAnalyticsSwift */,
 				EDCE736D2C303B9200EEF3E5 /* CodeScanner */,
 			);
 			productName = BoxLabels;
@@ -283,7 +277,6 @@
 			mainGroup = ED6F7B962BE644C300928A6D;
 			packageReferences = (
 				ED6F7BB02BE6450100928A6D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				ED6F7BB52BE6496C00928A6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				EDCE736C2C303B9200EEF3E5 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = ED6F7BA02BE644C300928A6D /* Products */;
@@ -575,14 +568,6 @@
 				minimumVersion = 1.10.2;
 			};
 		};
-		ED6F7BB52BE6496C00928A6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.25.0;
-			};
-		};
 		EDCE736C2C303B9200EEF3E5 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -598,16 +583,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ED6F7BB02BE6450100928A6D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
-		};
-		ED6F7BBD2BE6519D00928A6D /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ED6F7BB52BE6496C00928A6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		ED6F7BBF2BE651A000928A6D /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ED6F7BB52BE6496C00928A6D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
 		};
 		EDCE736D2C303B9200EEF3E5 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
