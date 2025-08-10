@@ -21,16 +21,19 @@ struct BoxesListFeature {
         case cancelButtonTapped
         case confirmButtonTapped
         case onDelete(IndexSet)
-        case boxTapped(id: Box.ID)
     }
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .addBoxButtonTapped:
                 let id = Box.ID()
+                guard let qrCodeData = generateQRCode(from: id.uuidString) else {
+                    print("Error: Unable to generate QR code")
+                    return .none
+                }
                 state.addBox = BoxFormFeature.State(
                     box: Box(id: id,
-                            qrCode: generateQRCode(from: id.uuidString)!,
+                            qrCode: qrCodeData,
                             room: "Living Room",
                             size: "Small")
                 )
@@ -53,9 +56,6 @@ struct BoxesListFeature {
 
             case let .onDelete(indexSet):
                 state.boxes.remove(atOffsets: indexSet)
-                return .none
-
-            case .boxTapped:
                 return .none
             }
         }

@@ -12,9 +12,6 @@ struct BoxFormView: View {
     @Perception.Bindable var store: StoreOf<BoxFormFeature>
     @FocusState var focus: BoxFormFeature.State.Field?
 
-    let sizes = ["Small", "Medium", "Large"]
-    let rooms = ["Living Room", "Bedroom", "Hallway", "Garage", "Attic", "Kitchen", "Bathroom", "Other"]
-
     var body: some View {
         VStack {
             Form {
@@ -23,13 +20,13 @@ struct BoxFormView: View {
                         .focused($focus, equals: .title)
 
                     Picker("Room", selection: $store.box.room) {
-                        ForEach(rooms, id: \.self) {
+                        ForEach(Box.allRooms, id: \.self) {
                             Text($0)
                         }
                     }
 
                     Picker("Size", selection: $store.box.size) {
-                        ForEach(sizes, id: \.self) {
+                        ForEach(Box.allSizes, id: \.self) {
                             Text($0)
                         }
                     }

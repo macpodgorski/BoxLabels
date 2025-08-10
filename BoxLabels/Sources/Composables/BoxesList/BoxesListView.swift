@@ -17,8 +17,8 @@ struct BoxesListView: View {
                 NavigationLink(state: AppFeature.HomeTabFeature.Path.State.detail(BoxDetailFeature.State(box: $box))) {
                     CardView(box: box)
                 }
+                .listRowSeparatorTint(.white.opacity(0.2))
                 .listRowBackground(Color.brown)
-                .listRowSeparator(.visible, edges: .all)
             }
             .onDelete { indexSet in
                 store.send(.onDelete(indexSet))

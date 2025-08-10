@@ -18,15 +18,8 @@ struct Box: Identifiable, Equatable, Codable {
     var room = "Bedroom"
     var size = "Medium"
 
-//    init(id: UUID, title: String = "", boxItems: IdentifiedArrayOf<Item> = [],
-//         qrCode: UIImage, room: String = "", size: String = "") {
-//        self.id = id
-//        self.title = title
-//        self.boxItems = boxItems
-//        self.qrCode = qrCode.pngData()!
-//        self.room = room
-//        self.size = size
-//    }
+    static let allSizes = ["Small", "Medium", "Large"]
+    static let allRooms = ["Living Room", "Bedroom", "Hallway", "Garage", "Attic", "Kitchen", "Bathroom", "Other"]
 }
 
 extension Box {

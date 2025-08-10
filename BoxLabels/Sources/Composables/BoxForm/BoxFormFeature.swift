@@ -46,7 +46,6 @@ struct BoxFormFeature {
                     !state.box.boxItems.isEmpty,
                     let firstIndex = indices.first
                 else {
-                    state.box.boxItems.append(Item(id: Item.ID()))
                     return .none
                 }
                 let index = min(firstIndex, state.box.boxItems.count - 1)

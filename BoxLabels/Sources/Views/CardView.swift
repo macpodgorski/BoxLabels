@@ -19,12 +19,13 @@ struct CardView: View {
             .scaledToFit()
             .frame(width: 75, height: 75)
             .shadow(color: .gray, radius: 5, x: 5, y: 5)
+            .padding(.trailing, 10)
 
         Text(box.title)
             .font(.title)
             .foregroundStyle(.white)
     }
-    .padding()
+    .padding(5)
   }
 }
 
