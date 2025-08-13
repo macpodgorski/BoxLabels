@@ -27,7 +27,6 @@ struct BoxesListView: View {
         .sheet(item: $store.scope(state: \.addBox, action: \.addBox)) { addBoxStore in
             NavigationStack {
                 BoxFormView(store: addBoxStore)
-                    .navigationTitle("New box")
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Cancel") {

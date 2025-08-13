@@ -19,6 +19,7 @@ struct BoxLabelsApp: App {
     var body: some Scene {
         WindowGroup {
             AppView(store: Self.store)
+                .tint(.brown)
         }
     }
 }

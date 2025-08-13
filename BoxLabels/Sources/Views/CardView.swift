@@ -21,13 +21,6 @@ struct CardView: View {
                 .frame(width: 75, height: 75)
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
                 .padding(.trailing, 10)
-        } else {
-            Image(systemName: "xmark.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 75, height: 75)
-                    .foregroundColor(.gray)
-                    .padding(.trailing, 10)
         }
 
         Text(box.title)
