@@ -3,14 +3,15 @@ BoxLabels is a simple app to help you organise boxes in your home using QR Codes
 <p align="center">
   
 
-https://github.com/macpodgorski/BoxLabels/assets/35289229/a9faa152-76ed-4852-92da-9d1a2fffc9db
+
+https://github.com/user-attachments/assets/5cc5d2c9-cf79-4a4a-bcb3-d5efdadf6e83
 
 
-  <img src="https://github.com/macpodgorski/BoxLabels/assets/35289229/e0dbe1fa-2265-4b8c-a564-ae2b93e3adf4" width="300">
-  <img src="https://github.com/macpodgorski/BoxLabels/assets/35289229/e849f437-0150-4494-a7b7-1031f062ece0" width="300">
-  <img src="https://github.com/macpodgorski/BoxLabels/assets/35289229/2e70bfd3-425c-4686-8cdb-62d187f13fd6" width="300">
-  <img src="https://github.com/macpodgorski/BoxLabels/assets/35289229/542f937c-87ce-411e-a857-8eed807921ff" width="300">
-  <img src="https://github.com/macpodgorski/BoxLabels/assets/35289229/7199e414-7c9c-4ec8-b121-ef2a4c6c5539" width="300">
-  <img src="https://github.com/macpodgorski/BoxLabels/assets/35289229/d42fb18f-a911-478b-8e19-58ed48d77d38" width="300">
-  <img src="https://github.com/macpodgorski/BoxLabels/assets/35289229/bcc8e79b-d34b-4158-a53b-6371bfeb27e7" width="300">
+  <img src="https://github.com/user-attachments/assets/15da05b7-26ce-4985-b02b-07b2e7680957" width="300">
+  <img src="https://github.com/user-attachments/assets/903b0b66-6061-4e51-857a-2cef5bcafbaf" width="300">
+  <img src="https://github.com/user-attachments/assets/25d4ee47-ef66-492a-b20f-0b72a3ffe678" width="300">
+  <img src="https://github.com/user-attachments/assets/7f1066b4-3531-4e66-a7be-4b2f546acc18" width="300">
+  <img src="https://github.com/user-attachments/assets/8314ce85-33a0-46dd-9198-6ffe3cbcb808" width="300">
+  <img src="https://github.com/user-attachments/assets/b2c2f8ea-3f4c-4f1e-afa3-4f56dd71d31c" width="300">
+  <img src="https://github.com/user-attachments/assets/a2193abf-7c44-4ca6-b1a7-e5b657939ac4" width="300">
 </p>
