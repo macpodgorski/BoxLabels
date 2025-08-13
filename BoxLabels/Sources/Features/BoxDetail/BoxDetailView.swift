@@ -14,21 +14,29 @@ struct BoxDetailView: View {
     var body: some View {
         Form {
             Section {
-                Image(uiImage: UIImage(data: store.box.qrCode)!)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 200)
-                    .contextMenu {
-                        ShareLink(
-                            item: Image(uiImage: UIImage(data: store.box.qrCode)!),
-                            preview: SharePreview(
-                                "\(store.box.title) QR Code",
-                                image: Image(uiImage: UIImage(data: store.box.qrCode)!)
+                if let uiImage = UIImage(data: store.box.qrCode) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height: 150)
+                        .contextMenu {
+                            ShareLink(
+                                item: Image(uiImage: uiImage),
+                                preview: SharePreview(
+                                    "\(store.box.title) QR Code",
+                                    image: Image(uiImage: uiImage)
+                                )
                             )
-                        )
-                    }
+                        }
+                        .padding(.leading)
+                }
+            }
+            .listRowInsets(EdgeInsets())
+            .listRowBackground(Color.clear)
+
+            Section {
                 HStack {
-                    Label("Room", systemImage: "text.alignleft")
+                    Label("Room", systemImage: "door.left.hand.open")
                     Spacer()
                     Text(store.box.room)
                 }
@@ -41,12 +49,14 @@ struct BoxDetailView: View {
                 Text("Box info")
             }
 
-            Section {
-                ForEach(store.box.boxItems) { item in
-                    Label(item.title, systemImage: "archivebox")
+            if !store.box.boxItems.isEmpty {
+                Section {
+                    ForEach(store.box.boxItems) { item in
+                        Label(item.title, systemImage: "archivebox")
+                    }
+                } header: {
+                    Text("Items")
                 }
-            } header: {
-                Text("Items")
             }
         }
         .navigationTitle(Text(store.box.title))
@@ -65,7 +75,6 @@ struct BoxDetailView: View {
         .sheet(item: $store.scope(state: \.destination?.edit, action: \.destination.edit) ) { editBoxStore in
             NavigationStack {
                 BoxFormView(store: editBoxStore)
-                    .navigationTitle(store.box.title)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Cancel") {

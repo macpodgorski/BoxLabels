@@ -3,21 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		ED0EB7302C29957900A48F26 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB72F2C29957900A48F26 /* SettingsView.swift */; };
 		ED0EB7322C29963D00A48F26 /* BoxesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB7312C29963D00A48F26 /* BoxesListView.swift */; };
 		ED0EB7382C2A95EB00A48F26 /* ScanTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB7372C2A95EB00A48F26 /* ScanTabView.swift */; };
-		ED0EB73A2C2AA17900A48F26 /* QRCodeGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB7392C2AA17900A48F26 /* QRCodeGen.swift */; };
+		ED0EB73A2C2AA17900A48F26 /* QRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB7392C2AA17900A48F26 /* QRCodeGenerator.swift */; };
 		ED0EB73C2C2AA22100A48F26 /* BoxesListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB73B2C2AA22100A48F26 /* BoxesListFeature.swift */; };
 		ED0EB73E2C2C5C0A00A48F26 /* BoxDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB73D2C2C5C0900A48F26 /* BoxDetailFeature.swift */; };
 		ED0EB7402C2C5C7800A48F26 /* BoxDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB73F2C2C5C7800A48F26 /* BoxDetailView.swift */; };
 		ED3A619E2C2EC855008A818F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A619D2C2EC855008A818F /* CardView.swift */; };
 		ED3A61A02C2EF71D008A818F /* BoxFormFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A619F2C2EF71D008A818F /* BoxFormFeature.swift */; };
 		ED3A61A32C2EF9B5008A818F /* BoxFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A61A22C2EF9B5008A818F /* BoxFormView.swift */; };
-		ED3A61A72C2F0BFB008A818F /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A61A62C2F0BFB008A818F /* BoxView.swift */; };
 		ED6F7BA32BE644C300928A6D /* BoxLabelsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F7BA22BE644C300928A6D /* BoxLabelsApp.swift */; };
 		ED6F7BA72BE644C700928A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6F7BA62BE644C700928A6D /* Assets.xcassets */; };
 		ED6F7BAA2BE644C700928A6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6F7BA92BE644C700928A6D /* Preview Assets.xcassets */; };
@@ -36,14 +35,13 @@
 		ED0EB72F2C29957900A48F26 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		ED0EB7312C29963D00A48F26 /* BoxesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxesListView.swift; sourceTree = "<group>"; };
 		ED0EB7372C2A95EB00A48F26 /* ScanTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanTabView.swift; sourceTree = "<group>"; };
-		ED0EB7392C2AA17900A48F26 /* QRCodeGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGen.swift; sourceTree = "<group>"; };
+		ED0EB7392C2AA17900A48F26 /* QRCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerator.swift; sourceTree = "<group>"; };
 		ED0EB73B2C2AA22100A48F26 /* BoxesListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxesListFeature.swift; sourceTree = "<group>"; };
 		ED0EB73D2C2C5C0900A48F26 /* BoxDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDetailFeature.swift; sourceTree = "<group>"; };
 		ED0EB73F2C2C5C7800A48F26 /* BoxDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDetailView.swift; sourceTree = "<group>"; };
 		ED3A619D2C2EC855008A818F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		ED3A619F2C2EF71D008A818F /* BoxFormFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxFormFeature.swift; sourceTree = "<group>"; };
 		ED3A61A22C2EF9B5008A818F /* BoxFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxFormView.swift; sourceTree = "<group>"; };
-		ED3A61A62C2F0BFB008A818F /* BoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
 		ED6F7B9F2BE644C300928A6D /* BoxLabels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoxLabels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6F7BA22BE644C300928A6D /* BoxLabelsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxLabelsApp.swift; sourceTree = "<group>"; };
 		ED6F7BA62BE644C700928A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +54,10 @@
 		EDED65572C3495A800DCE761 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		EDFFF1232C32AA1100641378 /* ScanTabFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanTabFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EDE256A32E4BDAB2006D8C40 /* Extensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extensions; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		ED6F7B9C2BE644C300928A6D /* Frameworks */ = {
@@ -74,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				ED3A619D2C2EC855008A818F /* CardView.swift */,
-				ED3A61A62C2F0BFB008A818F /* BoxView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,15 +144,16 @@
 			isa = PBXGroup;
 			children = (
 				ED6F7BA22BE644C300928A6D /* BoxLabelsApp.swift */,
-				ED7BDDE42C2D858D00DECC03 /* Composables */,
-				ED7BDDE52C2D859400DECC03 /* Globals */,
+				ED7BDDE42C2D858D00DECC03 /* Features */,
+				EDE256A32E4BDAB2006D8C40 /* Extensions */,
+				ED7BDDE52C2D859400DECC03 /* Utils */,
 				ED6F7BC12BE6660800928A6D /* Models */,
 				ED3A619C2C2EC84A008A818F /* Views */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		ED7BDDE42C2D858D00DECC03 /* Composables */ = {
+		ED7BDDE42C2D858D00DECC03 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				EDED65542C34958E00DCE761 /* App */,
@@ -162,15 +164,15 @@
 				ED3A61A12C2EF9A3008A818F /* BoxForm */,
 				ED7BDDE82C2D867E00DECC03 /* Settings */,
 			);
-			path = Composables;
+			path = Features;
 			sourceTree = "<group>";
 		};
-		ED7BDDE52C2D859400DECC03 /* Globals */ = {
+		ED7BDDE52C2D859400DECC03 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				ED0EB7392C2AA17900A48F26 /* QRCodeGen.swift */,
+				ED0EB7392C2AA17900A48F26 /* QRCodeGenerator.swift */,
 			);
-			path = Globals;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		ED7BDDE72C2D85E000DECC03 /* BoxesList */ = {
@@ -241,6 +243,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EDE256A32E4BDAB2006D8C40 /* Extensions */,
 			);
 			name = BoxLabels;
 			packageProductDependencies = (
@@ -336,12 +341,11 @@
 				ED6F7BC42BE667BB00928A6D /* Box.swift in Sources */,
 				ED0EB73E2C2C5C0A00A48F26 /* BoxDetailFeature.swift in Sources */,
 				EDFFF1242C32AA1100641378 /* ScanTabFeature.swift in Sources */,
-				ED3A61A72C2F0BFB008A818F /* BoxView.swift in Sources */,
 				ED9E8AE32C2F60F50065EDFE /* HomeTabFeature.swift in Sources */,
 				ED9E8AE12C2F60EB0065EDFE /* HomeTabView.swift in Sources */,
 				ED0EB7382C2A95EB00A48F26 /* ScanTabView.swift in Sources */,
 				ED0EB73C2C2AA22100A48F26 /* BoxesListFeature.swift in Sources */,
-				ED0EB73A2C2AA17900A48F26 /* QRCodeGen.swift in Sources */,
+				ED0EB73A2C2AA17900A48F26 /* QRCodeGenerator.swift in Sources */,
 				ED0EB7322C29963D00A48F26 /* BoxesListView.swift in Sources */,
 				ED3A619E2C2EC855008A818F /* CardView.swift in Sources */,
 				ED6F7BA32BE644C300928A6D /* BoxLabelsApp.swift in Sources */,

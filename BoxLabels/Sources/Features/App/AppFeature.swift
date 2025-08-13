@@ -45,13 +45,3 @@ struct AppFeature {
         }
     }
 }
-
-extension PersistenceReaderKey
-where Self == PersistenceKeyDefault<FileStorageKey<IdentifiedArrayOf<Box>>> {
-  static var boxes: Self {
-    PersistenceKeyDefault(
-      .fileStorage(.documentsDirectory.appending(component: "boxes.json")),
-      []
-    )
-  }
-}

@@ -13,10 +13,12 @@ struct BoxFormView: View {
     @FocusState var focus: BoxFormFeature.State.Field?
 
     var body: some View {
-        VStack {
+        ZStack(alignment: .bottomTrailing) {
             Form {
                 Section {
                     TextField("Title", text: $store.box.title)
+                        .font(.title)
+                        .fontWeight(.bold)
                         .focused($focus, equals: .title)
 
                     Picker("Room", selection: $store.box.room) {
@@ -31,7 +33,7 @@ struct BoxFormView: View {
                         }
                     }
                 } header: {
-                    Text("Box details")
+                    Text("Box info")
                 }
                 Section {
                     ForEach($store.box.boxItems) { $item in
@@ -46,9 +48,17 @@ struct BoxFormView: View {
                     Text("Items")
                 }
             }
-            Button("New item") {
+            Button {
                 store.send(.addItemButtonTapped)
+            } label: {
+                Image(systemName: "plus")
+                    .font(.title.weight(.semibold))
+                    .padding()
+                    .background(Color.brown)
+                    .foregroundColor(.white)
+                    .clipShape(Circle())
             }
+            .padding(.trailing, 30)
         }
         .bind($store.focus, to: $focus)
     }

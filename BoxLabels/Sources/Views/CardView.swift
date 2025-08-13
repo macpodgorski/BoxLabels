@@ -13,13 +13,22 @@ struct CardView: View {
 
   var body: some View {
     HStack {
-        Image(uiImage: UIImage(data: box.qrCode)!)
-            .interpolation(.none)
-            .resizable()
-            .scaledToFit()
-            .frame(width: 75, height: 75)
-            .shadow(color: .gray, radius: 5, x: 5, y: 5)
-            .padding(.trailing, 10)
+        if let uiImage = UIImage(data: box.qrCode) {
+            Image(uiImage: uiImage)
+                .interpolation(.none)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 75, height: 75)
+                .shadow(color: .gray, radius: 5, x: 5, y: 5)
+                .padding(.trailing, 10)
+        } else {
+            Image(systemName: "xmark.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 75, height: 75)
+                    .foregroundColor(.gray)
+                    .padding(.trailing, 10)
+        }
 
         Text(box.title)
             .font(.title)
@@ -30,5 +39,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(box: Box(id: UUID(), title: "bofsdasdffsdx 1", qrCode: generateQRCode(from: "text")!))
+    CardView(box: Box(id: UUID(), title: "bofsdasdffsdx 1", qrCode: Data()))
 }

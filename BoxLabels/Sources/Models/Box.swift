@@ -23,15 +23,15 @@ struct Box: Identifiable, Equatable, Codable {
 }
 
 extension Box {
-  static let mock = Box(
-    id: Box.ID(),
-    title: "Box 1",
-    boxItems: [
-      Item(id: Item.ID(), title: "item1"),
-      Item(id: Item.ID(), title: "item2"),
-      Item(id: Item.ID(), title: "item3")],
-    qrCode: generateQRCode(from: "blank qr")!,
-    room: "Bedroom",
-    size: "Medium"
-  )
+    static let mock = Box(
+        id: Box.ID(),
+        title: "Box 1",
+        boxItems: [
+            Item(id: Item.ID(), title: "item1"),
+            Item(id: Item.ID(), title: "item2"),
+            Item(id: Item.ID(), title: "item3")],
+        qrCode: Data(),
+        room: "Bedroom",
+        size: "Medium"
+    )
 }

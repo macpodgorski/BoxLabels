@@ -25,7 +25,6 @@ struct AppView: View {
             //      Label("Settings", systemImage: "gearshape.fill")
             //  }
         }
-        .navigationTitle("BoxLabels")
     }
 }
 

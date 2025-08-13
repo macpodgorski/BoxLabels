@@ -22,12 +22,15 @@ struct BoxesListFeature {
         case confirmButtonTapped
         case onDelete(IndexSet)
     }
+
+    @Dependency(\.qrCodeGenerator) var qrCodeGenerator
+
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .addBoxButtonTapped:
                 let id = Box.ID()
-                guard let qrCodeData = generateQRCode(from: id.uuidString) else {
+                guard let qrCodeData = qrCodeGenerator.generateQRCode(from: id.uuidString) else {
                     print("Error: Unable to generate QR code")
                     return .none
                 }
@@ -37,7 +40,6 @@ struct BoxesListFeature {
                             room: "Living Room",
                             size: "Small")
                 )
-                // TODO: make qrcode from id and username in future
                 return .none
 
             case .addBox:

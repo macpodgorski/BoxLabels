@@ -14,6 +14,7 @@ struct BoxDetailFeature {
     enum Destination {
         case alert(AlertState<Alert>)
         case edit(BoxFormFeature)
+
         @CasePathable
         enum Alert {
             case confirmButtonTapped
@@ -35,6 +36,7 @@ struct BoxDetailFeature {
     }
 
     @Dependency(\.dismiss) var dismiss
+
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
@@ -60,31 +62,20 @@ struct BoxDetailFeature {
 
             case .saveEditButtonTapped:
                 @Shared(.boxes) var boxes: IdentifiedArrayOf<Box> = []
-                guard let editedBox = state.destination?.edit?.box else {
+                guard
+                    let editedBox = state.destination?.edit?.box,
+                    let editedBoxItems = state.destination?.edit?.box.boxItems.filter({!$0.title.isEmpty})
+                else {
                     return .none
                 }
                 state.box = editedBox
-                boxes.updateOrAppend(editedBox)
+                state.box.boxItems = editedBoxItems
+                boxes.updateOrAppend(state.box)
 
                 state.destination = nil
                 return .none
             }
         }
         .ifLet(\.$destination, action: \.destination)
-    }
-}
-
-extension AlertState where Action == BoxDetailFeature.Destination.Alert {
-    static let deleteBox = Self {
-        TextState("Delete?")
-    } actions: {
-        ButtonState(role: .destructive, action: .confirmButtonTapped) {
-            TextState("Yes")
-        }
-        ButtonState(role: .cancel) {
-            TextState("Cancel")
-        }
-    } message: {
-        TextState("Are you sure you want to delete this box?")
     }
 }
